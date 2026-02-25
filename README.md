@@ -3,7 +3,7 @@
 ## 1️⃣ IDE
 - **Visual Studio Code** installed and configured for PHP and Laravel development.  
 - Screenshot of IDE setup:  
-![VS Code Setup](assets/screenshots/vscode.png)
+![VS Code Setup](assets/vscode.png)
 
 ---
 
@@ -20,7 +20,7 @@ php -v
   
 - PHPUnit included as the testing framework (listed in composer.json under require-dev).  
 
-![PHPUnit](assets/screenshots/phpunit.png)
+![PHPUnit](assets/phpunit.png)
 
 
 ## 4️⃣ Git Repository Setup
@@ -31,13 +31,15 @@ Remote repository on GitHub: violation-penalty-subsystem
 
 Meaningful commits made for project progress.
 
-![Laravel & Testing Framework](assets/screenshots/gitignore.png)
+![Laravel & Testing Framework](assets/gitignore.png)
 
 
 ## 5️⃣ Project Structure
 violation-penalty-subsystem/
 ├── app/
-│   ├── Models/Student.php
+│   ├── Models/
+│         └──  Student.php
+│         └──  violation.php
 │   └── Services/PenaltyEngine.php
 ├── assets/
 │   ├── style.css
@@ -46,7 +48,6 @@ violation-penalty-subsystem/
 │   ├── students.blade.php
 │   └── violations.blade.php
 ├── tests/Unit/PenaltyEngineTest.php
-├── composer.json
 ├── .gitignore
 └── README.md
 
@@ -60,4 +61,4 @@ git commit -m "Initial commit"
 git remote add origin https://github.com/sunshinellanera-ss/violation-penalty-subsystem.git
 git push -u origin main
 
-![Evidence of Workflow](assets/screenshots/gitinit.png)
+![Evidence of Workflow](assets/gitinit.png)
