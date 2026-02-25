@@ -3,7 +3,7 @@
 ## 1️⃣ IDE
 - **Visual Studio Code** installed and configured for PHP and Laravel development.  
 - Screenshot of IDE setup:  
-![VS Code Setup](assets/vscode.png)
+![VS Code Setup](screenshots/vscode.png)
 
 ---
 
@@ -11,7 +11,7 @@
 - **PHP 8.2.12** installed and verified:  
 ```bash
 php -v
-![Programming Language Runtime](assets/screenshots/phpinstalled.png)
+![Programming Language Runtime](screenshots/phpinstalled.png)
 
 ## 3️⃣ Laravel & Testing Framework
 
@@ -31,7 +31,7 @@ Remote repository on GitHub: violation-penalty-subsystem
 
 Meaningful commits made for project progress.
 
-![Laravel & Testing Framework](assets/gitignore.png)
+![Laravel & Testing Framework](screenshots/gitignore.png)
 
 
 ## 5️⃣ Project Structure
@@ -61,4 +61,4 @@ git commit -m "Initial commit"
 git remote add origin https://github.com/sunshinellanera-ss/violation-penalty-subsystem.git
 git push -u origin main
 
-![Evidence of Workflow](assets/gitinit.png)
+![Evidence of Workflow](screenshots/gitinit.png)
