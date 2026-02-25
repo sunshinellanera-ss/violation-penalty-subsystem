@@ -11,7 +11,7 @@
 - **PHP 8.2.12** installed and verified:  
 ```bash
 php -v
-![Programming Language Runtime](screenshots/phpinstalled.png)
+![Programming Language Runtime](screenshots\phpinstalled.png)
 
 ## 3️⃣ Laravel & Testing Framework
 
@@ -20,7 +20,7 @@ php -v
   
 - PHPUnit included as the testing framework (listed in composer.json under require-dev).  
 
-![PHPUnit](assets/phpunit.png)
+![PHPUnit](screenshots\phpunit.png)
 
 
 ## 4️⃣ Git Repository Setup
@@ -31,7 +31,7 @@ Remote repository on GitHub: violation-penalty-subsystem
 
 Meaningful commits made for project progress.
 
-![Laravel & Testing Framework](screenshots/gitignore.png)
+![Laravel & Testing Framework](screenshots\gitignore.png)
 
 
 ## 5️⃣ Project Structure
@@ -61,4 +61,4 @@ git commit -m "Initial commit"
 git remote add origin https://github.com/sunshinellanera-ss/violation-penalty-subsystem.git
 git push -u origin main
 
-![Evidence of Workflow](screenshots/gitinit.png)
+![Evidence of Workflow](screenshots\gitinit.png)
