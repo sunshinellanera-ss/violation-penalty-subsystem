@@ -1,0 +1,641 @@
+/* =========================
+   GLOBAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    min-height: 100vh;
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+.login-container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.login-container:hover {
+    transform: scale(1.02);
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    color: #4f46e5;
+    font-size: 22px;
+}
+
+.input-group {
+    position: relative;
+    margin: 15px 0;
+}
+
+.input-group i {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #4f46e5;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 35px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #7c3aed;
+    outline: none;
+}
+
+.input-group select {
+    width: 100%;
+    padding: 12px 12px 12px 35px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.input-group select:focus {
+    border-color: #7c3aed;
+    outline: none;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.forgot {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.forgot:hover {
+    color: #4f46e5;
+    text-decoration: underline;
+}
+
+/* Role group icon */
+.role-group {
+    position: relative;
+    margin: 15px 0;
+}
+
+.role-group i {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #4f46e5;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+    position: fixed;
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(180deg, #4f46e5, #7c3aed);
+    padding: 25px 15px;
+    color: white;
+    box-shadow: 5px 0 25px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 12px;
+    margin: 8px 0;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateX(6px);
+}
+
+/* =========================
+   TOPBAR
+========================= */
+.topbar {
+    margin-left: 260px;
+    height: 75px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.topbar input {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 250px;
+}
+
+.topbar button {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.topbar button:hover {
+    transform: scale(1.05);
+}
+.topbar button.logout-btn {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+    margin-left: 10px;
+}
+
+.topbar button.logout-btn:hover {
+    transform: scale(1.05);
+}
+/* =========================
+   MAIN CONTENT
+========================= */
+.main {
+    margin-left: 260px;
+    padding: 40px;
+}
+
+.main h2 {
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: #1e293b;
+}
+
+/* =========================
+   DASHBOARD CARDS
+========================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 18px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* Colored Cards */
+.card:nth-child(1) {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.card:nth-child(3) {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.card:nth-child(4) {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.card i {
+    font-size: 28px;
+    opacity: 0.8;
+}
+
+.card h3 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+/* =========================
+   FORM SECTION
+========================= */
+.form-section {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.form-section input,
+.form-section select {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.form-section input:focus,
+.form-section select:focus {
+    border-color: #7c3aed;
+    outline: none;
+}
+
+.form-section button {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* =========================
+   TABLE
+========================= */
+.table-container {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 14px;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background: #f3f4f6;
+}
+
+/* =========================
+   ANALYTICS CANVAS
+========================= */
+canvas {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+/* =========================
+   STUDENT MANAGEMENT PAGE
+========================= */
+
+/* Form Section */
+.student-form {
+    background: linear-gradient(135deg, #eef2ff, #f3f4f6);
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    display: grid;
+    gap: 15px;
+}
+
+.student-form input,
+.student-form select,
+.student-form button {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.student-form input:focus,
+.student-form select:focus {
+    border-color: #7c3aed;
+    outline: none;
+}
+
+.student-form button {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.student-form button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Table Section */
+.table-container {
+    margin-top: 25px;
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+
+.table-container input.search {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+tbody tr:hover {
+    background: #e0e7ff;
+}
+
+button.edit-btn {
+    background: #10b981;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+button.delete-btn {
+    background: #ef4444;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+button.view-btn {
+    background: #3b82f6;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+button.edit-btn:hover,
+button.delete-btn:hover,
+button.view-btn:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+/* =========================
+   VIOLATION MANAGEMENT PAGE
+========================= */
+
+/* Form Section */
+.violation-form {
+    background: linear-gradient(135deg, #fef3c7, #fef9c3);
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    display: grid;
+    gap: 15px;
+}
+
+.violation-form input,
+.violation-form select,
+.violation-form button {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.violation-form input:focus,
+.violation-form select:focus {
+    border-color: #f59e0b;
+    outline: none;
+}
+
+.add-record-btn {
+    background: linear-gradient(90deg, #f59e0b, #d97706);
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 12px;
+}
+
+.add-record-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Table Section */
+.table-container {
+    margin-top: 25px;
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+
+.table-container input.search {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: linear-gradient(90deg, #f59e0b, #d97706);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:nth-child(even) {
+    background: #fefcf5;
+}
+
+tbody tr:hover {
+    background: #fef3c7;
+}
+
+button.edit-btn {
+    background: #10b981;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+button.delete-btn {
+    background: #ef4444;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+button.edit-btn:hover,
+button.delete-btn:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+/* =========================
+   ANALYTICS PAGE
+========================= */
+
+/* Cards Container */
+.main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+/* Individual Card Style */
+.main .card {
+    background: linear-gradient(135deg, #f97316, #fbbf24);
+    color: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.main .card i {
+    font-size: 36px;
+    opacity: 0.8;
+    margin-bottom: 12px;
+}
+
+.main .card h3 {
+    font-size: 28px;
+    margin: 5px 0;
+}
+
+.main .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+/* Chart Canvas Styling */
+canvas#trendChart {
+    width: 100% !important;
+    max-height: 400px;
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+/* Colored Cards */
+.card-red { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.card-yellow { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.card-green { background: linear-gradient(135deg, #10b981, #059669); }
+.card-blue { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+
+/* Card Icons & Text */
+.card i { font-size: 28px; opacity: 0.9; margin-bottom: 10px; }
+.card h3 { font-size: 30px; margin: 5px 0; }

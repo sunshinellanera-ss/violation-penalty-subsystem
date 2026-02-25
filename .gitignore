@@ -1,0 +1,11 @@
+/vendor/
+/node_modules/
+/.env
+.DS_Store
+/config/
+/public/
+/storage/
+/bootstrap/
+/resources/css/
+/resources/js/
+/resources/sass/

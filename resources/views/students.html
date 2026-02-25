@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students - SVMS</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<!-- Sidebar -->
+  <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>SVMS</h2>
+        <a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+        <a href="students.html"><i class="fas fa-users"></i> Students</a>
+        <a href="violations.html"><i class="fas fa-exclamation-circle"></i> Violations</a>
+        <a href="history.html"><i class="fas fa-history"></i> Student History</a>
+        <a href="reports.html"><i class="fas fa-file-alt"></i> Reports</a>
+        <a href="analytics.html"><i class="fas fa-chart-pie"></i> Analytics</a>
+        <a href="clearance.html"><i class="fas fa-check-circle"></i> Clearance</a>
+        <a href="users.html"><i class="fas fa-user-cog"></i> User Management</a>
+        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+    </div>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="left">
+            <i class="fas fa-bars" onclick="toggleSidebar()"></i>
+            <input type="text" placeholder="Search Student...">
+        </div>
+        <div>
+            <i class="fas fa-bell"></i>
+            <button class="logout-btn" onclick="location.href='login.html'">Logout</button>
+        </div>
+    </div>
+
+<!-- Main Content -->
+<div class="main">
+    <h2>Student Management</h2>
+
+   
+
+    <!-- Student Table -->
+    <div class="table-container">
+       
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-001</td>
+                    <td>Juan Dela Cruz</td>
+                    <td>BSCS</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                        <button class="view-btn">View</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2024-002</td>
+                    <td>Maria Santos</td>
+                    <td>ABM</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                        <button class="view-btn">View</button>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>2024-003</td>
+                    <td>Stepanie Tuazon </td>
+                    <td>BSCS</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                        <button class="view-btn">View</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
